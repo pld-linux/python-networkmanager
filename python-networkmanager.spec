@@ -51,6 +51,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %py_postclean
 
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+cp -a examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -60,6 +63,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/n-m
 %{py_sitescriptdir}/NetworkManager.py[co]
 %{py_sitescriptdir}/python_networkmanager-%{version}-py*.egg-info
+%{_examplesdir}/%{name}-%{version}
 
 %files apidoc
 %defattr(644,root,root,755)
