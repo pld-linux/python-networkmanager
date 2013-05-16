@@ -7,6 +7,7 @@ License:	GPL v3+
 Group:		Libraries/Python
 Source0:	http://pypi.python.org/packages/source/p/python-networkmanager/%{name}-%{version}.tar.gz
 # Source0-md5:	dbfaff8bf2b27d9448fd22ab4a3bed40
+URL:		http://pythonhosted.org/python-networkmanager/
 BuildRequires:	python-devel-tools
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
