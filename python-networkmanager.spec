@@ -1,12 +1,13 @@
 %define		module	networkmanager
 Summary:	Easy communication with NetworkManager
+Summary(pl.UTF-8):	Łatwa komunikacja z NetworkManagerem
 Name:		python-%{module}
-Version:	0.9.9
+Version:	0.9.10
 Release:	1
 License:	GPL v3+
 Group:		Libraries/Python
 Source0:	http://pypi.python.org/packages/source/p/python-networkmanager/%{name}-%{version}.tar.gz
-# Source0-md5:	b03e2ff80c0a6ec31db2153095b281a1
+# Source0-md5:	fe1721c51a85ac7a15563acae168b9bc
 URL:		http://pythonhosted.org/python-networkmanager/
 BuildRequires:	python-devel-tools
 BuildRequires:	rpm-pythonprov
@@ -16,22 +17,29 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-python-networkmanager wraps NetworkManagers D-Bus interface so you can
-be less verbose when talking to NetworkManager from Python. All
+python-networkmanager wraps NetworkManager's D-Bus interface so you
+can be less verbose when talking to NetworkManager from Python. All
 interfaces have been wrapped in classes, properties are exposed as
 Python properties and function calls are forwarded to the correct
 interface.
 
+%description -l pl.UTF-8
+python-networkmanager obudowuje interfejs D-Bus NetworkManagera,
+dzięki czemu nie trzeba pisać dużo kodu, żeby komunikować się z
+NetworkManagerem z poziomu Pythona. Wszystkie interfejsy zostały
+obudowane w klasach, właściwości są udostępnione jako pythonowe, a
+wywołania funkcji są przekazywane do właściwego interfejsu.
+
 %package apidoc
 Summary:	%{module} API documentation
-Summary(pl.UTF-8):	Dokumentacja API %{module}
+Summary(pl.UTF-8):	Dokumentacja API modułów networkmanagera
 Group:		Documentation
 
 %description apidoc
 API documentation for %{module}.
 
 %description apidoc -l pl.UTF-8
-Dokumentacja API %{module}.
+Dokumentacja API modułów networkmanagera.
 
 %prep
 %setup -q
