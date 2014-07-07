@@ -2,12 +2,12 @@
 Summary:	Easy communication with NetworkManager
 Summary(pl.UTF-8):	Łatwa komunikacja z NetworkManagerem
 Name:		python-%{module}
-Version:	0.9.10
+Version:	0.9.12
 Release:	1
 License:	GPL v3+
 Group:		Libraries/Python
-Source0:	http://pypi.python.org/packages/source/p/python-networkmanager/%{name}-%{version}.tar.gz
-# Source0-md5:	fe1721c51a85ac7a15563acae168b9bc
+Source0:	https://pypi.python.org/packages/source/p/python-networkmanager/%{name}-%{version}.tar.gz
+# Source0-md5:	2cd400a7ca4dcd1ea98c864007032494
 URL:		http://pythonhosted.org/python-networkmanager/
 BuildRequires:	python-devel-tools
 BuildRequires:	rpm-pythonprov
@@ -30,15 +30,16 @@ NetworkManagerem z poziomu Pythona. Wszystkie interfejsy zostały
 obudowane w klasach, właściwości są udostępnione jako pythonowe, a
 wywołania funkcji są przekazywane do właściwego interfejsu.
 
-%package apidoc
+%package apidocs
 Summary:	%{module} API documentation
 Summary(pl.UTF-8):	Dokumentacja API modułów networkmanagera
 Group:		Documentation
+Obsoletes:	python-networkmanager-apidoc
 
-%description apidoc
+%description apidocs
 API documentation for %{module}.
 
-%description apidoc -l pl.UTF-8
+%description apidocs -l pl.UTF-8
 Dokumentacja API modułów networkmanagera.
 
 %prep
@@ -69,7 +70,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README
+# COPYING contains only general notice, not GPL text
+%doc COPYING README
 %attr(755,root,root) %{_bindir}/n-m
 %{py_sitescriptdir}/NetworkManager.py[co]
 %{py_sitescriptdir}/python_networkmanager-%{version}-py*.egg-info
