@@ -3,7 +3,7 @@ Summary:	Easy communication with NetworkManager
 Summary(pl.UTF-8):	Łatwa komunikacja z NetworkManagerem
 Name:		python-%{module}
 Version:	0.9.12
-Release:	1
+Release:	2
 License:	GPL v3+
 Group:		Libraries/Python
 Source0:	https://pypi.python.org/packages/source/p/python-networkmanager/%{name}-%{version}.tar.gz
