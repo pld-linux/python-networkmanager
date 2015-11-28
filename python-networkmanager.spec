@@ -46,7 +46,7 @@ Dokumentacja API modułów networkmanagera.
 %setup -q
 
 %build
-%{__python} setup.py build
+%py_build
 
 # generate html docs
 sphinx-build docs html
@@ -55,10 +55,7 @@ sphinx-build docs html
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__python} setup.py install \
-	--skip-build \
-	--optimize=2 \
-	--root=$RPM_BUILD_ROOT
+%py_install
 
 %py_postclean
 
