@@ -11,7 +11,7 @@ Source0:	https://pypi.python.org/packages/source/p/python-networkmanager/%{name}
 URL:		http://pythonhosted.org/python-networkmanager/
 BuildRequires:	python-devel-tools
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	rpmbuild(macros) >= 1.710
 BuildRequires:	sphinx-pdg
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
